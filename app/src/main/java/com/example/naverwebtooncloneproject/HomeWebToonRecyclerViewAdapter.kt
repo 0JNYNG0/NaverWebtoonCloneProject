@@ -1,6 +1,8 @@
 package com.example.naverwebtooncloneproject
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +24,19 @@ class HomeWebToonRecyclerViewAdapter(private val mContext: Context, private val 
             toonTitleText.text = toon.title
             toonWriter.text = toon.writer
             toonGrade.text = toon.grade.toString()
+
+            itemView.setOnClickListener {
+                val intent = Intent(mContext, WebToonDetailListActivity::class.java)
+                val bundle = Bundle()
+                bundle.putString("coverImage", toon.coverImage.toString())
+                bundle.putString("title", toon.title)
+                bundle.putString("writer", toon.writer)
+                bundle.putString("grade", toon.grade.toString())
+                bundle.putString("imageList", toon.imageList.toString())
+                intent.putExtra("data", bundle)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                mContext.startActivity(intent)
+            }
         }
     }
 

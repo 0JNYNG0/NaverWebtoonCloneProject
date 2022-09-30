@@ -10,6 +10,9 @@
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/drawable/icon_my.xml" value="0.1" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/drawable/icon_recommended.xml" value="0.1" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/activity_main.xml" value="0.24444444444444444" />
+        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/activity_search.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/activity_webtoon_detail_list.xml" value="0.22" />
+        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/activity_webtoon_watch.xml" value="0.15830800405268491" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_home.xml" value="0.28894927536231885" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_home_date_new.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_home_tab_everyday.xml" value="0.18070652173913043" />
@@ -23,7 +26,7 @@
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_home_tab_tuesday.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_home_tab_wednesday.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_main_bestchallenge.xml" value="0.28894927536231885" />
-        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_main_home.xml" value="0.33" />
+        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_main_home.xml" value="0.1" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_main_mine.xml" value="0.28894927536231885" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_main_more.xml" value="0.28894927536231885" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/fragment_main_recommend.xml" value="0.28894927536231885" />
@@ -31,6 +34,8 @@
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/main_home_tab_viewpager.xml" value="0.1458966565349544" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/main_home_tab_viewpager_item.xml" value="0.5" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/main_home_top_viewpager.xml" value="0.22" />
+        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/webtoon_detail_list_item.xml" value="0.5" />
+        <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/layout/webtoon_watch_item.xml" value="0.17" />
         <entry key="..\:/Users/qkrwn/AndroidStudioProjects/NaverWebtoonCloneProject/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
       </map>
     </option>

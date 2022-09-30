@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NaverWebtoonCloneProject</string>
+    <string name="search_hint">제목 또는 작가명 검색</string>
 </resources>

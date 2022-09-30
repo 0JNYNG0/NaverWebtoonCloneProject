@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/webtoon_detail_list_item_image"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="6dp"
+        android:src="@color/cardview_shadow_start_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/webtoon_detail_list_item_underline"/>
+
+    <TextView
+        android:id="@+id/webtoon_detail_list_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Title is here"
+        app:layout_constraintBottom_toTopOf="@id/webtoon_detail_list_item_starShape"
+        app:layout_constraintStart_toEndOf="@id/webtoon_detail_list_item_image"
+        app:layout_constraintTop_toTopOf="@id/webtoon_detail_list_item_image"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/webtoon_detail_list_item_starShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="★"
+        app:layout_constraintBottom_toBottomOf="@id/webtoon_detail_list_item_image"
+        app:layout_constraintStart_toStartOf="@id/webtoon_detail_list_item_title"
+        app:layout_constraintTop_toBottomOf="@id/webtoon_detail_list_item_title" />
+
+    <TextView
+        android:id="@+id/webtoon_detail_list_item_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintBottom_toBottomOf="@id/webtoon_detail_list_item_starShape"
+        app:layout_constraintStart_toEndOf="@id/webtoon_detail_list_item_starShape"
+        app:layout_constraintTop_toTopOf="@id/webtoon_detail_list_item_starShape" />
+
+    <View
+        android:id="@+id/webtoon_detail_list_item_underline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="#787878"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/webtoon_detail_list_item_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
