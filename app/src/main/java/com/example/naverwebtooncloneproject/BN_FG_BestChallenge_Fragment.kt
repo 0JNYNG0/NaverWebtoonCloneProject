@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class MainRecommendFragment : Fragment() {
+class BN_FG_BestChallenge_Fragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main_recommend, container, false)
+        return inflater.inflate(R.layout.fragment_foreground_bestchallenge, container, false)
     }
 }

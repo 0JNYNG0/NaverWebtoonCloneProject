@@ -17,7 +17,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.math.abs
 import kotlin.math.max
 
-class MainHomeFragment(private val mContext: MainActivity, private val toonList: MutableList<HomeWebToonData>) : Fragment() {
+class BN_FG_Home_Fragment(private val mContext: MainActivity, private val toonList: MutableList<HomeWebToonData>) : Fragment() {
     private val minAlpha = 0.5f
     private val minScale = 0.99f
     private val totalNumBanner = 20
@@ -28,18 +28,18 @@ class MainHomeFragment(private val mContext: MainActivity, private val toonList:
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_main_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_foreground_home, container, false)
 
-        mainViewpager = view.findViewById(R.id.home_main_grid_viewpager)
         val tabLayout: TabLayout = view.findViewById(R.id.home_date_tab)
         val topViewPager: ViewPager2 = view.findViewById(R.id.home_top_viewpager)
-
-        // main_웹툰 Viewpager 어댑터 연결
         val viewPagerAdapter = HomeMainViewPagerAdapter(mContext, toonList)
+        val topViewPagerAdapter = HomeTopViewpagerAdapter(mContext)
+
+        mainViewpager = view.findViewById(R.id.home_main_grid_viewpager)
+        // main_웹툰 Viewpager 어댑터 연결
         mainViewpager.adapter = viewPagerAdapter
         //mainViewpager.isUserInputEnabled = false
         // main_상단 Viewpager 어댑터 연결
-        val topViewPagerAdapter = HomeTopViewpagerAdapter(mContext)
         topViewPager.adapter = topViewPagerAdapter
 
         topViewPager.setPageTransformer(MarginPageTransformer(40))

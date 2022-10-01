@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +22,7 @@ class HomeMenuTabNewFragment(private val mainActivity: MainActivity, private val
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.main_home_tab_viewpager, container, false)
+        val view = inflater.inflate(R.layout.viewpager_webtoon_main_tab, container, false)
 
         val recyclerAdapter = HomeWebToonRecyclerViewAdapter(mContext, toonList)
         val rccView = view.findViewById<RecyclerView>(R.id.home_tab_recyclerview)

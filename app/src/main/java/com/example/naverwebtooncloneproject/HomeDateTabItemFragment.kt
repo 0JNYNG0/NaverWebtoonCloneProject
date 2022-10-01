@@ -1,13 +1,10 @@
 package com.example.naverwebtooncloneproject
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class HomeDateTabItemFragment : Fragment() {
@@ -16,7 +13,7 @@ class HomeDateTabItemFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.main_home_tab_viewpager, container, false)
+        return inflater.inflate(R.layout.viewpager_webtoon_main_tab, container, false)
     }
 }
 

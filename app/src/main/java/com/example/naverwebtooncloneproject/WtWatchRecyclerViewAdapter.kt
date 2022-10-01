@@ -2,30 +2,29 @@ package com.example.naverwebtooncloneproject
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.naverwebtooncloneproject.databinding.ItemWebtoonWatchBinding
 
-class WtWatchRecyclerViewAdapter(private val mContext: Context, private val mList: MutableList<WatchToonData>):
+class WtWatchRecyclerViewAdapter(private val mContext: Context, private val mList: MutableList<WebtoonWatchData>):
     RecyclerView.Adapter<WtWatchRecyclerViewAdapter.ViewHolder>() {
 
-    inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        private val watchCutSceneNumber: TextView = itemView.findViewById(R.id.webtoon_watch_cutScene_number)
+    inner class ViewHolder(private val viewBinding: ItemWebtoonWatchBinding): RecyclerView.ViewHolder(viewBinding.root) {
+        private val watchCutSceneNumber = viewBinding.webtoonWatchCutSceneNumber
 
-        fun bind(toon: WatchToonData) {
+        fun bind(toon: WebtoonWatchData) {
             watchCutSceneNumber.text = toon.imageList.toString()
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.webtoon_watch_item, parent, false)
-        return ViewHolder(view)
+        val viewBinding = ItemWebtoonWatchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+
+        return ViewHolder(viewBinding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = mList[position]
-        holder.bind(user)
+        holder.bind(mList[position])
     }
 
     override fun getItemCount() = mList.size

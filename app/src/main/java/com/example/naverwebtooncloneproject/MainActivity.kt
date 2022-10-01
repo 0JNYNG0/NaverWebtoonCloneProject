@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.naverwebtooncloneproject.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -60,19 +59,19 @@ class MainActivity : AppCompatActivity() {
             setOnItemSelectedListener {
                 when (it.itemId) {
                     R.id.home_item -> {
-                        backStackFragment(MainHomeFragment(this@MainActivity, toonList))
+                        changeFragment(BN_FG_Home_Fragment(this@MainActivity, toonList))
                     }
                     R.id.recommend_item -> {
-                        changeFragment(MainRecommendFragment())
+                        changeFragment(BN_FG_Recommend_Fragment())
                     }
                     R.id.bestChallenge_item -> {
-                        changeFragment(MainBestChallengeFragment())
+                        changeFragment(BN_FG_BestChallenge_Fragment())
                     }
                     R.id.mine_item -> {
-                        changeFragment(MainMineFragment())
+                        changeFragment(BN_FG_Mine_Fragment())
                     }
                     R.id.more_item -> {
-                        changeFragment(MainMoreFragment())
+                        changeFragment(BN_FG_More_Fragment())
                     }
                 }
                 true

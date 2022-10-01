@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.naverwebtooncloneproject.databinding.ActivityWebtoonWatchBinding
 
-class WebToonWatchActivity : AppCompatActivity(){
+class WtWatchActivity : AppCompatActivity(){
     private lateinit var binding: ActivityWebtoonWatchBinding
     private lateinit var toonData: Bundle
     private lateinit var adapter: WtWatchRecyclerViewAdapter
-    private var toonList = mutableListOf<WatchToonData>()
+    private var toonList = mutableListOf<WebtoonWatchData>()
 
     private var watchToonImage = 0
 
@@ -39,7 +39,7 @@ class WebToonWatchActivity : AppCompatActivity(){
         watchToonImage = toonData.getString("imageList", "0").toInt()
 
         for (i in 1 until watchToonImage+1){
-            val wData = WatchToonData(i)
+            val wData = WebtoonWatchData(i)
             toonList.add(wData)
 
         }

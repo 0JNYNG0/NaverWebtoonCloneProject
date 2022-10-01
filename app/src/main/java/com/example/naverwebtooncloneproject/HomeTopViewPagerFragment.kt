@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import androidx.viewpager2.widget.ViewPager2
 
 class HomeTopViewPagerFragment(private val position: Int) : Fragment() {
     override fun onCreateView(
@@ -16,7 +15,7 @@ class HomeTopViewPagerFragment(private val position: Int) : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.main_home_top_viewpager, container, false)
+        val view = inflater.inflate(R.layout.viewpager_webtoon_main_top_slider, container, false)
 
         when(position % 3) {
             0 -> view.setBackgroundColor(Color.parseColor("#b9fffc"))

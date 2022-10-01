@@ -22,7 +22,7 @@ class HomeMenuTabTuesdayFragment(private val mainActivity: MainActivity, private
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.main_home_tab_viewpager, container, false)
+        val view = inflater.inflate(R.layout.viewpager_webtoon_main_tab, container, false)
 
         val recyclerAdapter = HomeWebToonRecyclerViewAdapter(mContext, toonList)
         val rccView = view.findViewById<RecyclerView>(R.id.home_tab_recyclerview)

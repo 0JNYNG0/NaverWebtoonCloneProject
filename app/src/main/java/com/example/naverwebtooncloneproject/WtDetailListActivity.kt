@@ -10,7 +10,7 @@ import com.example.naverwebtooncloneproject.databinding.ActivityMainBinding
 import com.example.naverwebtooncloneproject.databinding.ActivityWebtoonDetailListBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class WebToonDetailListActivity : AppCompatActivity(){
+class WtDetailListActivity : AppCompatActivity(){
     private lateinit var binding: ActivityWebtoonDetailListBinding
     private lateinit var toonData: Bundle
     private lateinit var adapter: WtDetailListRecyclerViewAdapter

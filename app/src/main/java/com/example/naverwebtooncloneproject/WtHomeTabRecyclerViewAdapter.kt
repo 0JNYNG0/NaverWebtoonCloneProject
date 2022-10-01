@@ -4,16 +4,16 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.naverwebtooncloneproject.databinding.ItemViewpagerWebtoonMainTabBinding
 
 class HomeWebToonRecyclerViewAdapter(private val mContext: Context, private val mList: MutableList<HomeWebToonData>):
     RecyclerView.Adapter<HomeWebToonRecyclerViewAdapter.ViewHolder>() {
 
-    inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(private val viewBinding: ItemViewpagerWebtoonMainTabBinding): RecyclerView.ViewHolder(viewBinding.root) {
         private val coverImage: ImageView = itemView.findViewById(R.id.toon_coverImage)
         private val toonTitleText: TextView = itemView.findViewById(R.id.toon_title_text)
         private val toonWriter: TextView = itemView.findViewById(R.id.toon_writer)
@@ -26,7 +26,7 @@ class HomeWebToonRecyclerViewAdapter(private val mContext: Context, private val 
             toonGrade.text = toon.grade.toString()
 
             itemView.setOnClickListener {
-                val intent = Intent(mContext, WebToonDetailListActivity::class.java)
+                val intent = Intent(mContext, WtDetailListActivity::class.java)
                 val bundle = Bundle()
                 bundle.putString("coverImage", toon.coverImage.toString())
                 bundle.putString("title", toon.title)
@@ -41,13 +41,13 @@ class HomeWebToonRecyclerViewAdapter(private val mContext: Context, private val 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.main_home_tab_viewpager_item, parent, false)
-        return ViewHolder(view)
+        val viewBinding = ItemViewpagerWebtoonMainTabBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+
+        return ViewHolder(viewBinding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = mList[position]
-        holder.bind(user)
+        holder.bind(mList[position])
     }
 
     override fun getItemCount() = mList.size
