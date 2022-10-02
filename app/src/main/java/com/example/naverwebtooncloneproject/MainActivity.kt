@@ -14,7 +14,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    private var toonList = mutableListOf<HomeWebToonData>()
+    private var toonList = mutableListOf<MutableList<HomeWebToonData>>()
     private lateinit var mReceiver: BroadcastReceiver
     private lateinit var mainViewpager: ViewPager2
 
@@ -43,17 +43,37 @@ class MainActivity : AppCompatActivity() {
 
         // 웹툰들의 정보가 담긴 toonList를 아래 MainHomeFragment 호출할 때 정보를 보내준 뒤
         // recyclerView 어댑터를 연결시켜준다
+        for (i in 0 .. 10) { // 0_index (new) / 1_index (Mon) / 2_index (Tue) / ... / 9_index (fin)
+            val el = mutableListOf<HomeWebToonData>()
 
-        for (i in 1 until 84) {
-            val name = "sq_0"
-            val imageId =
-                resources.getIdentifier(name, "drawable", "com.example.naverwebtooncloneproject")
-            toonList.add(
-                HomeWebToonData(
-                    imageId, "Title_$i", "Writer_$i", i.toFloat(), 70
-                )
-            )
+            val idx: Int = when (i) {
+                0 -> 2
+                in 1..7 -> i
+                8 -> 3
+                else -> 4
+            }
+            for (j in 0 .. 29) {
+                val name = "wt$idx" + "_" + "$j"
+
+                val imageId =
+                    resources.getIdentifier(name, "drawable", "com.example.naverwebtooncloneproject")
+                el.add(HomeWebToonData(imageId, "Title_$i", "Writer_$i", 0.00f, 70))
+            }
+
+            toonList.add(el)
         }
+
+
+        //for (i in 1 until 84) {
+        //    val name = "sq_0"
+        //    val imageId =
+        //        resources.getIdentifier(name, "drawable", "com.example.naverwebtooncloneproject")
+        //    toonList.add(
+        //        HomeWebToonData(
+        //            imageId, "Title_$i", "Writer_$i", i.toFloat(), 70
+        //       )
+        //    )
+        //}
 
         binding.homeBottomNavigationView.run {
             setOnItemSelectedListener {
@@ -147,22 +167,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        outState.putInt("imageId", imageIdData)
-        outState.putString("title", titleData)
-        outState.putString("writer", writerData)
-        outState.putFloat("grade", gradeData)
-        outState.putInt("imageList", 70)
-        super.onSaveInstanceState(outState)
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        imageIdData = savedInstanceState.getInt("imageId")
-        titleData = savedInstanceState.getString("title").toString()
-        writerData = savedInstanceState.getString("writer").toString()
-        gradeData = savedInstanceState.getFloat("grade")
-        toonList.add(HomeWebToonData(imageIdData, titleData, writerData, gradeData, 70))
-    }
 
 }

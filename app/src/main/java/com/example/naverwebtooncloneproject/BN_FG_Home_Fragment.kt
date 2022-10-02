@@ -17,7 +17,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.math.abs
 import kotlin.math.max
 
-class BN_FG_Home_Fragment(private val mContext: MainActivity, private val toonList: MutableList<HomeWebToonData>) : Fragment() {
+class BN_FG_Home_Fragment(private val mContext: MainActivity, private val toonList: MutableList<MutableList<HomeWebToonData>>) : Fragment() {
     private val minAlpha = 0.5f
     private val minScale = 0.99f
     private val totalNumBanner = 20
